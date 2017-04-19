@@ -18,7 +18,7 @@ scriptname="auto-reroute"
 ############################
 ##### Script Notes End #####
 ############################
-# I didn't know where to put this as i didnt want to put it with the bulk of the script, and i wanted it checked early
+1# I didn't know where to put this as i didnt want to put it with the bulk of the script, and i wanted it checked early
 if [ "$(hostname -f | awk -F. '{print $2;}')" == "feralhosting" ]; then
 	echo -e "\033[31m""it looks like you are trying to run this from a Feral slot, it is meant to be run from your home network""\e[0m"
 	exit
@@ -46,10 +46,10 @@ fi
 ############################
 #
 #
-routes=(0.0.0.0 130.117.255.36 77.67.64.81 213.19.196.233 81.20.64.101 81.20.69.197 62.115.145.50)
-route_names=(Default Cogent GTT Level3 NTT#1 NTT#2 Telia)
+routes=(0.0.0.0 130.117.255.36 31.217.134.45 31.217.134.49 77.67.64.81 213.19.196.233 81.20.64.101 81.20.69.197 62.115.145.50)
+route_names=(Default Cogent Console#1 Console#2 GTT Level3 NTT#1 NTT#2 Telia)
 #
-test_files=(https://feral.io/test.bin https://cogent-1.feral.io/test.bin https://gtt-1.feral.io/test.bin https://level3.feral.io/test.bin https://ntt-1.feral.io/test.bin https://ntt-2.feral.io/test.bin https://telia.feral.io/test.bin)
+test_files=(https://feral.io/test.bin https://cogent-1.feral.io/test.bin https://atrato-1.feral.io/test.bin https://atrato-2.feral.io/test.bin https://gtt-1.feral.io/test.bin https://level3.feral.io/test.bin https://ntt-1.feral.io/test.bin https://ntt-2.feral.io/test.bin https://telia.feral.io/test.bin)
 count=-1
 reroute_log=/tmp/$(openssl rand -hex 10)
 ############################
